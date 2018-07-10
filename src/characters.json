@@ -2,61 +2,61 @@
   {
     "id": 1,
     "name": "Bojack Horseman",
-    "image": "../public/img/bojack_1"
+    "image": "https://imgur.com/wMpuPsq.png"
   },
   {
     "id": 2,
     "name": "Rutabaga Rabitowitz",
-    "image": "../public/img/bojack_2" 
+    "image": "https://i.imgur.com/GOrHVQw.png" 
   },
   {
     "id": 3,
     "name": "Princess Carolyn",
-    "image": "../public/img/bojack_3" 
+    "image": "https://imgur.com/ZHQkHgm.png" 
   },
   {
     "id": 4,
     "name": "Sarah Lynne",
-    "image": "../public/img/bojack_4"
+    "image": "https://imgur.com/Pv7dgQl.png"
   },
   {
     "id": 5,
     "name": "Wanda Pierce",
-    "image": "../public/img/bojack_5"
+    "image": "https://i.imgur.com/R2At3s1.png"
   },
   {
     "id": 6,
     "name": "Cuddlywhiskers",
-    "image": "../public/img/bojack_6"
+    "image": "https://i.imgur.com/zjX6R9Z.png"
   },
   {
     "id": 7,
     "name": "Diane Nguyen",
-    "image": "../public/img/bojack_7"
+    "image": "https://imgur.com/Zs7i1TG.png"
   },
   {
     "id": 8,
     "name": "Lennie Turtletaub",
-    "image": "../public/img/bojack_8"
+    "image": "https://imgur.com/9tEMDUq.png"
   },
   {
     "id": 9,
     "name": "Mr. Witherspoon",
-    "image": "../public/img/bojack_9"
+    "image": "https://imgur.com/JMmUfy0.png"
   },
   {
     "id": 10,
     "name": "Todd Chavez",
-    "image": "../public/img/bojack_10"
+    "image": "https://i.imgur.com/UYlBF4Q.png"
   },
   {
     "id": 11,
     "name": "Mr. Peanutbutter",
-    "image": "../public/img/bojack_11"
+    "image": "https://imgur.com/ZHQkHgm.png"
   },
   {
     "id": 12,
     "name": "Tom Jumbo-Grumbo",
-    "image": "../public/img/bojack_12"
+    "image": "https://imgur.com/ILEtJXm.png"
   }
 ]
