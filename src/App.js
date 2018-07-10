@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
+import Card from "./components/Card"
+import characters from "./characters.json"
 
 class App extends Component {
 
   state = {
-    score: 0
+    score: 0,
+    friendsArray: []
   };
 
+  componentDidMount() {
+    
+  }
 
 
   render() {
@@ -30,6 +36,16 @@ class App extends Component {
         <div className="jumbotron">
           <h1>Clicky Game!</h1>
           <p>Click on an image to earn points, but don't click on any more than once!</p>
+        </div>
+        <div>
+          {characters.map(character => (
+            <Card 
+              id={character.id}
+              key={character.id}
+              name={character.name}
+              image={character.image}
+            />
+          ))}
         </div>
       </div>
     );
