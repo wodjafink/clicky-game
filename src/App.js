@@ -9,12 +9,31 @@ class App extends Component {
   state = {
     score: 0,
     topScore: 0,
-    drawCardsArray: [0],
+    drawCharactersArray: [],
     clickedCardsArray: [0]
   };
 
-  componentDidMount() {
+  shuffleCharacterArray(characters) {
+    console.log("Shuffling");
+    let array = characters;
+    let i = array.length - 1;
+    console.log("i starts at " + i);
+    for (; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
 
+    for (i = 0; i < array.length; i++){
+      console.log(array[i])
+    }
+    return array;
+  }
+
+  componentDidMount() {
+    // this.setState({drawCharactersArray: characters}, )
+    this.setState({drawCharactersArray: this.shuffleCharacterArray(characters)})
   }
 
   updateTopScore = () =>{
@@ -39,9 +58,7 @@ class App extends Component {
     if (isInArray){
       // Score gets set back to zero
       this.setState({score: 0});
-      console.log("You've already clicked this one");
     } else {
-      console.log("Haven't clicked this one yet");
       // Add to the clicked array
       this.setState({
         clickedCardsArray: [...this.state.clickedCardsArray, id]
@@ -49,13 +66,9 @@ class App extends Component {
 
       // Add to score
       this.setState({score: this.state.score + 1}, this.updateTopScore);
-      // console.log("Array: ")
-      // for (var j = 0; j < clickedCardsArray.length; j++){
-      //   console.log(clickedCardsArray[j])
-      // }
     }
 
-
+    this.setState({drawCharactersArray: this.shuffleCharacterArray(characters)})
 
   }
 
@@ -82,7 +95,7 @@ class App extends Component {
           <p>Click on an image to earn points, but don't click on any more than once!</p>
         </div>
         <Wrapper>
-            {characters.map(character => (
+            {this.state.drawCharactersArray.map(character => (
               <Card 
                 clickCard={this.clickCard}
                 id={character.id}
