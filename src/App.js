@@ -10,6 +10,7 @@ class App extends Component {
     score: 0,
     topScore: 0,
     drawCharactersArray: [],
+    title: "Click an image to begin!",
     clickedCardsArray: [0]
   };
 
@@ -58,6 +59,7 @@ class App extends Component {
     if (isInArray){
       // Score gets set back to zero
       this.setState({score: 0});
+      this.setState({title: "You've already guessed that one!"})
     } else {
       // Add to the clicked array
       this.setState({
@@ -66,6 +68,7 @@ class App extends Component {
 
       // Add to score
       this.setState({score: this.state.score + 1}, this.updateTopScore);
+      this.setState({title: "You Guessed Correctly!"})
     }
 
     this.setState({drawCharactersArray: this.shuffleCharacterArray(characters)})
@@ -82,7 +85,7 @@ class App extends Component {
                 <h2>Clicky Game</h2>
               </div>
               <div className="col-md-4">
-                <h2>Click an image to begin!</h2>
+                <h2>{this.state.title}</h2>
               </div>
               <div className="col-md-4">
                 <h2>Score: {this.state.score} | Top Score: {this.state.topScore}</h2>
